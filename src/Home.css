@@ -1,0 +1,22 @@
+.home{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    height: 100vh;
+}
+.home--play{
+    height: 30px;
+    width: 10%;
+    margin: 0 45% 0 45%;
+    border-radius: 20px;
+    background-color: black;
+    text-align: center;
+}
+.home--play--button{
+    text-decoration: none;
+    color: white;
+    line-height: 30px;
+    padding: 0 37% 0 37%;
+}
