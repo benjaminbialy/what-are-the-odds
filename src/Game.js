@@ -1,29 +1,31 @@
-import React from 'react';
+import React from 'react'
 import GameButtons from "./GameButtons.js"
+import { useState } from 'react';
 
-class Game extends React.Component {
-  constructor(props){
-    super(props);
-    this.state = { likelihood__buttons: <GameButtons/> };
-  }
-    render() {
-      return ( 
-        <div className="game">
+function Game() {
+  const [event, setEvent] = useState(null);
+
+
+  return (
+    <div>
+       <div className="game">
           <div className="game--left">
-            <div className="game--left--event">{this.props.stated__event__name}</div>
+            <div className="game--left--event"></div>
             <p>has a</p>
-            <div className="game--left--odds">{this.props.stated__odds}</div>
+            <div className="game--left--odds"></div>
             <p>chance of occuring.</p>
           </div>
           <div className="home--right">
-            <div className="game--right--event">{this.props.unstated__event__name}</div>
+            <div className="game--right--event"></div>
             <p>has a</p>
-            <div className="game--right--buttons">{this.state.likelihood__buttons}</div>
-            <p>chance of occuring than {this.props.stated__event__name}.</p>
+            <div className="game--right--buttons">
+              <GameButtons/>
+            </div>
+            <p>chance of occuring than.</p>
           </div>
         </div>
-        );
-    }
+    </div>
+  )
 }
 
-export default Game;
+export default Game
