@@ -7,7 +7,10 @@ const UserSchema = new mongoose.Schema({
     },
     highscore:{
         type: Number,
-        required: true,
         default: 0,
     }
 })
+
+const UserModel = mongoose.model("users",UserSchema)
+
+module.exports = UserModel
